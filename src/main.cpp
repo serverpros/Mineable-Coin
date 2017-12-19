@@ -2783,7 +2783,7 @@ bool InitBlockIndex() {
         //   vMerkleTree: 4a5e1e
 
         // Genesis block
-        const char* pszDedication = "Sunny King - dedicated to Satoshi Nakamoto and all who have fought for the freedom of mankind";
+        const char* pszDedication = "A Coin Anyone Can mine";
         CTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -2794,15 +2794,15 @@ bool InitBlockIndex() {
         block.vtx.push_back(txNew);
         block.hashPrevBlock = 0;
         block.hashMerkleRoot = block.BuildMerkleTree();
-        block.nTime    = 1373064429;
+        block.nTime    = 1513667177;
         block.nBits    = TargetFromInt(6);
-        block.nNonce   = 383;
+        block.nNonce   = 1986;
         block.bnPrimeChainMultiplier = ((uint64) 532541) * (uint64)(2 * 3 * 5 * 7 * 11 * 13 * 17 * 19 * 23);
 
         if (fTestNet)
         {
-            block.nTime    = 1373063882;
-            block.nNonce   = 1513;
+            block.nTime    = 1513667177;
+            block.nNonce   = 342;
             block.bnPrimeChainMultiplier = ((uint64) 585641) * (uint64)(2 * 3 * 5 * 7 * 11 * 13 * 17 * 19 * 23);
         }
 
